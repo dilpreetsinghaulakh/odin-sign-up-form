@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 
 body {
   background-image: url("https://unsplash.com/photos/WM5niLEWPRM/download?force=true");
@@ -16,7 +16,6 @@ body {
 
 .logo {
   width: 40%;
-  /* max-width: 500px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,7 +33,12 @@ body {
   position: absolute;
   bottom: 0;
   font-size: smaller;
-  opacity: 0.65;
+  opacity: 0.5;
+  transition: opacity ease-in-out 250ms;
+}
+
+.logo > p:hover {
+  opacity: 1;
 }
 
 a {
@@ -42,7 +46,7 @@ a {
 }
 
 .content {
-  background-color: #e8e9f5;
+  background-color: hsl(88, 20%, 98%);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -54,4 +58,61 @@ a {
   font-size: 1.3em;
   margin-inline: 3rem;
   max-width: 700px;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 0.25rem 3rem;
+  margin-top: 3rem;
+  box-shadow: 0.2px 0.1px 7.3px rgba(0, 0, 0, 0.014),
+    0.4px 0.4px 13.8px rgba(0, 0, 0, 0.026),
+    0.9px 0.7px 19.2px rgba(0, 0, 0, 0.037),
+    1.5px 1.3px 23.6px rgba(0, 0, 0, 0.047),
+    2.4px 2px 26.6px rgba(0, 0, 0, 0.055),
+    3.6px 3.1px 28.1px rgba(0, 0, 0, 0.061),
+    5.3px 4.6px 27.9px rgba(0, 0, 0, 0.065),
+    8px 6.8px 25.7px rgba(0, 0, 0, 0.066),
+    12.7px 10.9px 21.9px rgba(0, 0, 0, 0.063),
+    35px 30px 80px rgba(0, 0, 0, 0.07);
+}
+
+.form-container > h2 {
+  margin-block: 1rem;
+  color: #353535;
+}
+
+form {
+  display: grid;
+  max-width: 700px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-block: 1.5rem;
+}
+
+form > label {
+  display: flex;
+  flex-direction: column;
+  font-family: Staatliches;
+  font-size: 0.8em;
+  color: #4a4a4a;
+  letter-spacing: 0.1em;
+}
+
+form > label > input {
+  font-size: 0.9rem;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  outline: none;
+  background-color: #fefefe;
+  border: 1px #eaeaea solid;
+  box-sizing: border-box;
+  transition: all 250ms ease-in-out;
+}
+
+form > label > input:focus {
+  border: rgb(9, 87, 230) 1px solid;
+  box-shadow: 0px 2.5px 1.8px rgba(0, 0, 0, 0.024),
+    0px 2.8px 3.6px rgba(0, 0, 0, 0.051), 0px 2.7px 5.8px rgba(0, 0, 0, 0.08),
+    0px 2.4px 9px rgba(0, 0, 0, 0.114), 0px 2.2px 16.4px rgba(0, 0, 0, 0.154),
+    0px 3px 80px rgba(0, 0, 0, 0.17);
 }
